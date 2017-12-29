@@ -29,3 +29,7 @@ body, html {
     height: 400px;
     background: linear-gradient(to bottom, #66ff99 0%, #33ccff 100%);
 }
+h1 {
+    font-size: 3em;
+    font-family: Verdana, sans-serif;
+}
