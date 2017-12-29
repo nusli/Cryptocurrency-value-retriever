@@ -8,19 +8,24 @@ body, html {
 }
 .grid-wrapper {
     width: 100%;
+    display: grid;
+}
+.grid-box {
+    margin: 0;
+    padding: 0;
 }
 .grid-box.box-big {
-    width: 600px;
-    height: 600px;
+    width: 700px;
+    height: 700px;
     background: linear-gradient(to bottom, #ff5050 0%, #ffcc00 100%);
 }
 .grid-box.box-medium {
-    width: 400px;
-    height: 400px;
+    width: 500px;
+    height: 500px;
     background: linear-gradient(to bottom, #ffff66 0%, #99ff66 100%);
 }
 .grid-box.box-small {
-    width: 300px;
-    height: 300px;
+    width: 400px;
+    height: 400px;
     background: linear-gradient(to bottom, #66ff99 0%, #33ccff 100%);
 }
