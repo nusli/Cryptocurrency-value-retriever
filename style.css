@@ -29,7 +29,20 @@ body, html {
     height: 400px;
     background: linear-gradient(to bottom, #66ff99 0%, #33ccff 100%);
 }
+h1, h2, h3, h4 {
+    font-family: Verdana, sans-serif;
+}
 h1 {
     font-size: 3em;
-    font-family: Verdana, sans-serif;
+}
+h3 {
+    font-size: 2.5em;
+}
+p {
+    font-size: 2em;
+    font-family: Arial, Helvetica, sans-serif;
+}
+a {
+    text-decoration: none;
+    color: orange;
 }
