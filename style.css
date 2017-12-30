@@ -13,6 +13,7 @@ body, html {
 .grid-box {
     margin: 0;
     padding: 0;
+    text-align: center;
 }
 .grid-box.box-big {
     width: 700px;
