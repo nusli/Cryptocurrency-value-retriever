@@ -1,13 +1,11 @@
 const coinbinUrl = "https://coinbin.org/";
 // API request objects
-let btcReq = new XMLHttpRequest() /*,
-ethReq = new XMLHttpRequest(),
-xrpReq = new XMLHttpRequest()*/;
+let top3Req = new XMLHttpRequest();
 
-btcReq.open("GET", coinbinUrl + "btc");
-btcReq.onreadystatechange = function () {
+top3Req.open("GET", "https://api.coinmarketcap.com/v1/ticker/?convert=EUR&limit=3");
+top3Req.onreadystatechange = function () {
     if (this.readyState === 4 && this.status === 200) {
         console.log(this.responseText);
     }
 };
-btcReq.send();
+top3Req.send();
