@@ -17,8 +17,16 @@
         <div class="grid-box box-small">
         </div>
     </div>
+    <p>Look up another cryptocurrency</p>
+<form action="javascript:searchCurrency()">
+    <input type="search" name="currencySearch" id="currencySearch" />
+    <input type="submit" value="Go!" />
+</form>
+<div id="searchresult"></div>
 
+<footer>
 <p>Created using the <a href="https://coinmarketcap.com/api/">CoinMarketCap API</a>.</p>
+</footer>
 
 <script src="index.js"></script>
 </body>
