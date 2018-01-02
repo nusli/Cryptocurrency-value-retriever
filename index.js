@@ -50,10 +50,10 @@ function searchCurrency () {
         let allCookies = document.cookie.split(";"),
         cookieName = "apiRequests";
         allCookies.forEach(cookiePair => {
-            if (cookiePair.search(cookieName) >= 0) {
+            if (cookiePair.indexOf(cookieName) >= 0) {
                 alert(cookiePair);
                 let eqIndex = cookiePair.indexOf("=");
-                console.log(Number(cookiePair.slice(eqIndex)));
+                console.log(cookiePair.slice(eqIndex));
                 return Number(cookiePair.slice(eqIndex)); 
             }
         });
