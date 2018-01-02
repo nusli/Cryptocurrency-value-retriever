@@ -53,7 +53,7 @@ function searchCurrency () {
             if (cookiePair.indexOf(cookieName) >= 0) {
                 alert(cookiePair);
                 let eqIndex = cookiePair.indexOf("=");
-                console.log(cookiePair.slice(eqIndex));
+                console.log(cookiePair.slice(eqIndex +1));
                 return Number(cookiePair.slice(eqIndex+1)); 
             }
         });
