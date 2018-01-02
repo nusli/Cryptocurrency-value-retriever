@@ -54,7 +54,7 @@ function searchCurrency () {
                 alert(cookiePair);
                 let eqIndex = cookiePair.indexOf("=");
                 console.log(cookiePair.slice(eqIndex));
-                return Number(cookiePair.slice(eqIndex)); 
+                return Number(cookiePair.slice(eqIndex+1)); 
             }
         });
         return 0;
