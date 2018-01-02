@@ -49,14 +49,15 @@ function searchCurrency () {
     function getAPICount () {
         let allCookies = document.cookie.split(";"),
         cookieName = "apiRequests";
-        allCookies.forEach(cookiePair => {
+        for (let i = 0; i<allCookies.length; i++) {
+            let cookiePair = allCookies[i];
             if (cookiePair.indexOf(cookieName) >= 0) {
                 alert(cookiePair);
                 let eqIndex = cookiePair.indexOf("=");
                 console.log(cookiePair.slice(eqIndex +1));
                 return Number(cookiePair.slice(eqIndex+1)); 
             }
-        });
+        }
         return 0;
     }
 
