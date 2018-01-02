@@ -52,6 +52,7 @@ function searchCurrency () {
             if (cookiePair.search(cookieName) >= 0) {
                 alert(cookiePair);
                 let eqIndex = cookiePair.indexOf("=");
+                console.log(Number(cookiePair.slice(eqIndex)))
                 return Number(cookiePair.slice(eqIndex)); 
             }
         });
