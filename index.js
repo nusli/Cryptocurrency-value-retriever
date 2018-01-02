@@ -48,6 +48,7 @@ function searchCurrency () {
             document.cookie = "apiRequests=1;" + expires + ";path=/";
         }
     }
+
     function getAPICount () {
         let allCookies = document.cookie.split(";"),
         cookieName = "apiRequests";
@@ -66,6 +67,7 @@ function searchCurrency () {
     if (getAPICount >= 2) {
         document.getElementById("searchresult").innerHTML = 
             "<p id='error-message'>Too many requests. You cannot send more than 2 requests per minute.</p>";
+            return;
     }
     let searchValue = document.getElementById("currencySearch").value.toLowerCase(),
     currencyReq = new XMLHttpRequest();
