@@ -38,6 +38,7 @@ function searchCurrency () {
         d = new Date();
         d.setTime(d.getTime() + (5*60*1000)); // set time to 1min in the future
         let expires = "expires=" + d.toGMTString();
+        console.log(APICount);
 
         if (APICount > 0 ) { //Increase count by 1
             document.cookie = `apiRequests=${Number(APICount)++}; ${expires}; path=/`;
@@ -52,7 +53,7 @@ function searchCurrency () {
             if (cookiePair.search(cookieName) >= 0) {
                 alert(cookiePair);
                 let eqIndex = cookiePair.indexOf("=");
-                console.log(Number(cookiePair.slice(eqIndex)))
+                console.log(Number(cookiePair.slice(eqIndex)));
                 return Number(cookiePair.slice(eqIndex)); 
             }
         });
