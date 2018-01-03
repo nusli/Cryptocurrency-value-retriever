@@ -1,7 +1,5 @@
 
 let top3Req = new XMLHttpRequest();
-var tempString = `1 + 2 = ${1+2}`;
-alert(tempString);
 
 top3Req.open("GET", "https://api.coinmarketcap.com/v1/ticker/?convert=EUR&limit=3");
 top3Req.onreadystatechange = function () {
@@ -36,11 +34,12 @@ function searchCurrency () {
         // prepare everything for the cookie
         let APICount = getAPICount() + 1,
         d = new Date();
-        d.setTime(d.getTime() + (5*60*1000)); // set time to 1min in the future
+        d.setTime(d.getTime() + (60*1000)); // set time to 1min in the future
         let expires = "expires=" + d.toGMTString();
         console.log(APICount);
 
-        document.cookie = "apiRequests=" + APICount + "; " + expires + "; path=/";
+        //document.cookie = "apiRequests=" + APICount + "; " + expires + "; path=/";
+        document.cookie = `apiRequests=${APICount}; ${expires}; path=/`;
 
         /*if (APICount > 0 ) { //Increase count by 1
             console.log("APICount > 0", APICount);
