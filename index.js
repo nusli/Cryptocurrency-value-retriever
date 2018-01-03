@@ -53,8 +53,8 @@ function searchCurrency () {
     }
 
     if (getAPICount() >= 2) {
-        document.getElementById("searchresult").innerHTML = 
-            "<p id='error-message'>Too many requests. You cannot send more than 2 requests per minute.</p>";
+        document.getElementById("error-message").innerHTML = 
+            "Too many requests. You cannot send more than 2 requests per minute.";
             return;
     }
     let searchValue = document.getElementById("currencySearch").value.toLowerCase(),
@@ -70,8 +70,8 @@ function searchCurrency () {
             addDataToBox(data[0], newDiv);
             setCountCookie();
         } else if (this.readyState === 4) {
-            document.getElementById("searchresult").innerHTML = 
-            "<p id='error-message'>Something went wrong. Make sure you spelled the name of the currency correctly.</p>";
+            document.getElementById("error-message").innerHTML = 
+            "Something went wrong. Make sure you spelled the name of the currency correctly.";
         }
     }
 
