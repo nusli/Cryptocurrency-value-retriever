@@ -1,4 +1,3 @@
-
 let top3Req = new XMLHttpRequest();
 
 top3Req.open("GET", "https://api.coinmarketcap.com/v1/ticker/?convert=EUR&limit=3");
@@ -25,7 +24,7 @@ function addDataToBox (obj, box) {
         <li>Price €: ${Number(obj.price_eur).toFixed(2)}</li>
         <li>Supply: ${obj.total_supply}</li>
     </ul>
-    `
+    `;
 }
 
 function searchCurrency () {
@@ -36,18 +35,8 @@ function searchCurrency () {
         d = new Date();
         d.setTime(d.getTime() + (60*1000)); // set time to 1min in the future
         let expires = "expires=" + d.toGMTString();
-        console.log(APICount);
 
-        //document.cookie = "apiRequests=" + APICount + "; " + expires + "; path=/";
         document.cookie = `apiRequests=${APICount + 1}; ${expires}; path=/`;
-
-        /*if (APICount > 0 ) { //Increase count by 1
-            console.log("APICount > 0", APICount);
-            document.cookie = `apiRequests=2; ${expires}; path=/`;
-        } else { // set new cookie, count = 1
-            console.log("setting cookie to 1");
-            document.cookie = "apiRequests=1;" + expires + ";path=/";
-        }*/
     }
 
     function getAPICount () {
@@ -56,9 +45,7 @@ function searchCurrency () {
         for (let i = 0; i<allCookies.length; i++) {
             let cookiePair = allCookies[i];
             if (cookiePair.indexOf(cookieName) >= 0) {
-                alert(cookiePair);
                 let eqIndex = cookiePair.indexOf("=");
-                console.log(cookiePair.slice(eqIndex +1));
                 return Number(cookiePair.slice(eqIndex+1)); 
             }
         }
