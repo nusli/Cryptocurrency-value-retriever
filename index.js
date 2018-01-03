@@ -41,7 +41,7 @@ function searchCurrency () {
         console.log(APICount);
 
         if (APICount > 0 ) { //Increase count by 1
-            console.log("APICount > 0");
+            console.log("APICount > 0", APICount);
             document.cookie = `apiRequests=2; ${expires}; path=/`;
         } else { // set new cookie, count = 1
             console.log("setting cookie to 1");
