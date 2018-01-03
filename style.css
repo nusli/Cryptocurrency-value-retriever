@@ -22,6 +22,7 @@ header {
     display: inline-block;
     min-height: 250px;
     min-width: 225px;
+    overflow: hidden;
 }
 .grid-box.box-big {
     width: 100%;
@@ -64,6 +65,14 @@ h3 {
     list-style-type: none;
     padding: 0;
 }
+.subheading {
+    font-size: 1.5em;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: italic;
+}
+.space-left {
+    margin-left: 15px;
+}
 p, li {
     font-size: 1.5em;
     font-family: Arial, Helvetica, sans-serif;
@@ -76,4 +85,9 @@ p, li {
 a {
     text-decoration: none;
     color: orange;
+}
+#searchresult {
+    margin: auto;
+    width: 85%;
+    min-width: 225px;
 }
