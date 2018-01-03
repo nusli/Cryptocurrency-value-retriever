@@ -11,9 +11,22 @@ header {
     background-color: #ccc;
     border-bottom: 2px solid #333;
 }
+footer {
+    background-color: #ccc;
+    border-top: 2px solid #333;
+    display: block;
+    height: 70px;
+    margin-top: 50px;
+}
+.button {
+    border-radius: 2px;
+    background: linear-gradient(to bottom, #eeeeee 0%, #999999 100%);
+    box-shadow: 2px 2px 4px #888888;
+}
 .grid-wrapper {
     width: 100%;
     display: grid;
+    transition: all 0.3s;
 }
 .grid-box {
     margin: 0;
@@ -23,6 +36,7 @@ header {
     min-height: 250px;
     min-width: 225px;
     overflow: hidden;
+    transition: all 0.3s;
 }
 .grid-box.box-big {
     width: 100%;
@@ -69,6 +83,7 @@ h3 {
     font-size: 1.5em;
     font-family: Arial, Helvetica, sans-serif;
     font-style: italic;
+    margin-top: 50px;
 }
 .space-left {
     margin-left: 15px;
@@ -90,4 +105,69 @@ a {
     margin: auto;
     width: 85%;
     min-width: 225px;
+}
+
+@media screen and (min-width: 730px) {
+    .grid-wrapper {
+        grid-template-areas:
+        " big medium "
+        " small . "; 
+        align-items: end;
+        justify-content: center;
+    }
+    .grid-box.box-big {
+        width: 400px;
+        height: 400px;
+        max-height: 500px;
+        grid-area: big;
+    }
+    .grid-box.box-medium {
+        width: 320px;
+        max-height: 320px;
+        grid-area: medium;
+    }
+    .grid-box.box-small {
+        width: 260px;
+        max-height: 260px;
+        grid-area: small;
+    }
+    #searchresult {
+        margin: auto;
+        width: 660px;
+        min-height: 250px;
+    }
+    .box-orange:nth-child(odd) {
+        margin-right: 20px;
+    }
+}
+@media screen and (min-width: 1000px) {
+    .grid-wrapper {
+        grid-template-areas: 
+        " big medium small ";
+    }
+    .grid-box.box-big {
+        width: 40vw;
+        height: 40vw;
+    }
+    .grid-box.box-medium {
+        width: 31vw;
+        height: 31vw;
+        max-height: 400px;
+    }
+    .grid-box.box-small {
+        width: 25vw;
+        height: 25vw;
+        max-height: 350px;
+    }
+    #searchresult {
+        width: 100%;
+        margin: 0;
+    }
+    /* Disabling th margin from previous media query*/
+    .box-orange:nth-child(odd) {
+        margin-right: 0;  
+    }
+    .box-orange {
+        margin-left: 1.7vw;
+    }
 }
