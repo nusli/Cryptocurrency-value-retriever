@@ -40,13 +40,15 @@ function searchCurrency () {
         let expires = "expires=" + d.toGMTString();
         console.log(APICount);
 
-        if (APICount > 0 ) { //Increase count by 1
+        document.cookie = "apiRequests=" + APICount+1 + "; " + expires + "; path=/";
+
+        /*if (APICount > 0 ) { //Increase count by 1
             console.log("APICount > 0", APICount);
             document.cookie = `apiRequests=2; ${expires}; path=/`;
         } else { // set new cookie, count = 1
             console.log("setting cookie to 1");
             document.cookie = "apiRequests=1;" + expires + ";path=/";
-        }
+        }*/
     }
 
     function getAPICount () {
