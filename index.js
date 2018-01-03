@@ -55,9 +55,9 @@ function searchCurrency () {
     document.getElementById("error-message").innerHTML = "";
 
     // check for too many requests
-    if (getAPICount() >= 2) {
+    if (getAPICount() >= 3) {
         document.getElementById("error-message").innerHTML = 
-            "Too many requests. You cannot send more than 2 requests per minute.";
+            "Too many requests. You cannot send more than 3 requests per minute.";
             return;
     }
     let searchValue = document.getElementById("currencySearch").value.toLowerCase(),
