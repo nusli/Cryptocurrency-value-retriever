@@ -32,14 +32,14 @@ function searchCurrency () {
     // cookie functions to limit api requests
     function setCountCookie () {
         // prepare everything for the cookie
-        let APICount = getAPICount() + 1,
+        let APICount = getAPICount(),
         d = new Date();
         d.setTime(d.getTime() + (60*1000)); // set time to 1min in the future
         let expires = "expires=" + d.toGMTString();
         console.log(APICount);
 
         //document.cookie = "apiRequests=" + APICount + "; " + expires + "; path=/";
-        document.cookie = `apiRequests=${APICount}; ${expires}; path=/`;
+        document.cookie = `apiRequests=${APICount + 1}; ${expires}; path=/`;
 
         /*if (APICount > 0 ) { //Increase count by 1
             console.log("APICount > 0", APICount);
