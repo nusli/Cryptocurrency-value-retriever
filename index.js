@@ -1,7 +1,7 @@
 
 let top3Req = new XMLHttpRequest();
-document.cookie = "test=test";
-alert(document.cookie);
+var tempString = `1 + 2 = ${1+2}`;
+alert(tempString);
 
 top3Req.open("GET", "https://api.coinmarketcap.com/v1/ticker/?convert=EUR&limit=3");
 top3Req.onreadystatechange = function () {
